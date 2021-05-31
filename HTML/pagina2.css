@@ -1,0 +1,83 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+ul {
+    margin: 5px;
+    padding: 5px;
+}
+
+p {
+    color: blue;
+}
+
+p b {
+    color: red;
+}
+
+span {
+    color: darkgreen;
+}
+
+
+/* 1 o mas elementos */
+
+.color2 {
+    color: cornflowerblue;
+}
+
+
+/* por id, solo una etiqueta*/
+
+#qwerty {
+    color: darkmagenta;
+}
+
+#ctbc b {
+    color: cyan !important;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+#div1 {
+    background-color: blueviolet;
+    width: 400px;
+    height: 400px;
+    padding: 10px;
+}
+
+#div11 {
+    background-color: white;
+    width: 40px;
+    height: 40px;
+}
+
+#div2 {
+    background-color: coral;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+#div1 {
+    background-color: blueviolet;
+    width: 400px;
+    height: 400px;
+    padding: 10px;
+}
+
+#div11 {
+    background-color: white;
+    width: 40px;
+    height: 40px;
+}
+
+#div2 {
+    background-color: coral;
+}

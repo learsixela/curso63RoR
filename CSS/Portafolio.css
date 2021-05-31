@@ -1,0 +1,171 @@
+#container {
+    background-color: rgb(235, 229, 229);
+    height: 1450px;
+}
+
+h1 {
+    font-family: fantasy;
+    display: inline-block;
+    padding-left: 30px;
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
+    position: absolute;
+    right: 40px;
+}
+
+.contenido {
+    background: linear-gradient(rgb(102, 25, 48), rgb(187, 150, 156), rgb(102, 25, 48));
+    width: 100%;
+    height: 1250px;
+}
+
+h4 {
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#rs {
+    display: inline;
+    position: absolute;
+    left: 35%;
+}
+
+.rs {
+    width: 20px;
+}
+
+span {
+    padding: 10px;
+    font-style: italic;
+}
+
+.foto {
+    border: 5px solid rgb(163, 156, 156);
+    display: inline-block;
+    width: 45%;
+    margin: 20px;
+}
+
+.texto {
+    width: 45%;
+    height: 400px;
+    background-color: silver;
+    display: inline-block;
+    vertical-align: top;
+    margin: 20px;
+    font-style: italic;
+}
+
+h3 {
+    color: white;
+    background: linear-gradient(rgb(179, 173, 173), rgb(126, 115, 115), rgb(179, 173, 173));
+    padding: 15px;
+    font-size: 25px;
+    margin: 0px;
+}
+
+p {
+    margin: 20px;
+    font-size: 21px;
+    margin-top: 20px;
+    text-align: justify;
+}
+
+.parrafo1 {
+    margin: 20px;
+    font-size: 21px;
+    margin-top: 20px;
+    padding-bottom: 80px;
+    text-align: justify;
+}
+
+.parrafo2 {
+    margin: 20px;
+    font-size: 21px;
+    margin-top: 20px;
+    padding-bottom: 55px;
+    text-align: justify;
+}
+
+.continue {
+    margin: 20px;
+    color: black;
+    font-size: larger;
+}
+
+.info1 {
+    width: 30%;
+    height: 750px;
+    margin: 20px;
+    background-color: silver;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.foto1 {
+    width: 100%;
+}
+
+.icono {
+    width: 35px;
+    margin: 5px;
+    margin-left: 20px;
+}
+
+.boton1 {
+    width: 70px;
+    text-align: center;
+    position: absolute;
+    left: 13%;
+    border-radius: 12px;
+    border-color: black;
+    background-color: rgb(3, 54, 3);
+    padding: 8px;
+    box-shadow: 0 8px 16px rgb(119, 114, 114), 0 6px 20px 0 rgb(119, 114, 114);
+}
+
+.lamode {
+    text-decoration: none;
+    color: white;
+}
+
+.boton2 {
+    width: 120px;
+    text-align: center;
+    position: absolute;
+    left: 44%;
+    border-radius: 12px;
+    border-color: black;
+    background-color: rgb(3, 54, 3);
+    padding: 8px;
+    box-shadow: 0 8px 16px rgb(119, 114, 114), 0 6px 20px 0 rgb(119, 114, 114);
+}
+
+.familycontacts {
+    text-decoration: none;
+    color: white;
+}
+
+.boton3 {
+    width: 70px;
+    text-align: center;
+    position: absolute;
+    left: 80%;
+    border-radius: 12px;
+    border-color: black;
+    background-color: rgb(3, 54, 3);
+    padding: 8px;
+    box-shadow: 0 8px 16px rgb(119, 114, 114), 0 8px 20px 0 rgb(119, 114, 114);
+}
+
+.fiveeleven {
+    text-decoration: none;
+    color: white;
+}
+
+@media screen and (min-width:481px) and (max-width:1023) {}
+
+@media screen and (min-width:1024px) {}
