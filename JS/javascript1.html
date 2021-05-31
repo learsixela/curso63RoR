@@ -52,20 +52,41 @@
             else {
                 return 4;
             }
-            console.log(b);
+            console.log(b); //NUNCA SE VA A EJECUTAR
         }
         console.log(a(15)); //console.log(4)
         //respuesta: 4
 
         /* ejercicio 7*/
-        function a(b, c) { //b=3; c=10 
+        function a(b, c) { //b= 3;c= 10
             return b * c; //return 30
         }
         console.log(10, 3);
         console.log(a(3, 10)); //console.log(30)
-        //respuesta: 10,3,30
+        //RESPT.: 10,3,30
 
         /* ejercicio 8*/
+        function a(b) {
+            for (var i = 0; i < 10; i++) {
+                console.log(i);
+            }
+            return i;
+        }
+        console.log(3);
+        console.log(4);
+        //resp.:3,4
+
+        /* ejercicio 9*/
+        function a() {
+            for (var i = 0; i < 10; i++) { //i=0>2>3>5>6>8>9>11>12
+                i = i + 2;
+                console.log(i);
+            }
+        }
+        a(); //llamado a la funcion
+        //respt.:2,5,8,11
+
+        /* ejercicio 10*/
     </script>
 </head>
 
