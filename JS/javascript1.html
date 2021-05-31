@@ -87,6 +87,75 @@
         //respt.:2,5,8,11
 
         /* ejercicio 10*/
+        function a(b, c) { //b=0; c=10
+
+            for (var i = 0; i < 10; i++) { //i=0>1>2>3>4>5>6>7>8>9>10
+                console.log(i);
+            }
+            return b * c; //return 0 * 10
+        }
+        a(0, 10); // 0
+        console.log(a(0, 10)); //console.log(0)
+        //respt.:0,1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9,0
+
+        /* ejercicio 11 */
+        function a() {
+            for (var i = 0; i < 10; i++) {
+                for (var j = 0; j < 10; j++) {
+                    console.log(j);
+                }
+                console.log(i);
+            }
+        }
+        //respt.:
+
+        /* ejercicio 12*/
+        function a() {
+            for (var i = 0; i < 10; i++) {
+                for (var j = 0; j < 10; j++) {
+                    console.log(i, j);
+                }
+                console.log(j, i);
+            }
+        }
+        //respt.:
+
+        /* ejercicio 13*/
+        var z = 10; //declarando o definiendo una variable
+
+        function a() {
+            var z = 15;
+            console.log(z);
+        }
+
+        console.log(z); //console.log(10)
+        //respt.: 10
+
+        /* ejercicio 14*/
+        var z = 10;
+
+        function a() {
+            var z = 15; //nueva variable
+            console.log(z); //console.log(15)
+        }
+        a(); //llamado a la funcion
+        console.log(z); //console.log(10)
+        //respt.:15,10
+
+        /* ejercicio 15*/
+
+
+
+        var z = 10; //declaracion de variable
+
+        function a() {
+            var z = 15; //nueva variable
+            console.log(z); //console.log(15)
+            return z; //return 15;
+        }
+        z = a(); //z = 15;
+        console.log(z); //console.log(15)
+        //respt.:15,15
     </script>
 </head>
 
