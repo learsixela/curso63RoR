@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style></style>
+    <script>
+        console.log("Fundamentos básicos JavaScript")
+            /* Obtén del 1 al 255: */
+            //Escribe una función que devuelve un array con todos los números del 1 al 255.
+
+        function de1a255() {
+            var array = []; //arreglo vacio; 
+            //array.length; array.push(?) y array.pop()
+            for (var i = 1; i <= 255; i++) {
+                array.push(i);
+            }
+            return array;
+        }
+        de1a255() //[1,2,3,4,5...254,255]
+        console.log(de1a255()); //console.log([1,2,3,4,5...254,255])
+        console.log("*** Ejercicio2 ***")
+
+        function paresHasta1000() {
+            var sumaPares = 0;
+            /*sumaPares = sumaPares + algo  -> ir acumulando
+            i++ -> i = i + 1
+            operador de modulo -> resto de dividir un numero por otro
+            if(numero%2 ==0){
+            }
+            4/2 = 2 (resto = 0); 5/2= 2 (resto = 1); 100/2 = 50 (resto = 0)  -4 /2 = -2 (resto = 0)
+             */
+
+            for (var i = 1; i <= 1000; i++) {
+                if (i % 2 == 0) {
+                    sumaPares = sumaPares + i; //6
+                }
+            }
+            return sumaPares;
+        }
+
+        console.log("suma total: " + paresHasta1000());
+    </script>
+</head>
+
+<body>
+    <h1>Fundamentos básicos JavaScript</h1>
+    <ol>
+        <li><b>Obtén del 1 al 255:</b>Escribe una función que devuelve un array con todos los números del 1 al 255.</li>
+        <li><b>Consigue pares hasta 1000:</b> Escribe una función que entregue la suma de todos los números pares del 1 al 1000 - Puedes usar un operador de módulo para este ejercicio.</li>
+    </ol>
+</body>
+
+</html>
