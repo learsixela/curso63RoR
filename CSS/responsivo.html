@@ -26,7 +26,12 @@
         @media only screen and (max-width: 480px) {
             /* we will set these stylings only if the device is a screen with a width of 480px or less */
             #principal {
-                background-color: yellow;
+                background-color: aquamarine;
+            }
+            #tablet,
+            #desktop {
+                display: none;
+                /*none: se ocultara*/
             }
         }
         /*tablet*/
@@ -36,13 +41,22 @@
             #principal {
                 background-color: green;
             }
+            #telefono,
+            #desktop {
+                display: none;
+                /*none: se ocultara*/
+            }
         }
         /*desktop*/
         
         @media only screen and (min-width: 1024px) {
-            /* we will set these stylings only if the device is a screen with a width of 480px or less */
             #principal {
                 background-color: aqua;
+            }
+            #telefono,
+            #tablet {
+                display: none;
+                /*none: se ocultara*/
             }
         }
     </style>
@@ -50,7 +64,17 @@
 
 <body>
     <div id="principal">
-        <p> Teléfono Ancho menor o igual a 480px Tablet Ancho entre 481px y 1023px Desktop Ancho mayor o igual a 1024px</p>
+        <div>
+            <h1>@Media Querys</h1>
+        </div>
+        <div>
+            <p>elrfgowierughflieruwh fiuweh eiruh fiuerhfiuer piuhfgpiuepfguierwghfoiuwfgh</p>
+        </div>
+        <div>
+            <p id="telefono">Teléfono Ancho menor o igual a 480px </p>
+            <p id="tablet">Tablet Ancho entre 481px y 1023px </p>
+            <p id="desktop">Desktop Ancho mayor o igual a 1024px</p>
+        </div>
     </div>
 </body>
 
