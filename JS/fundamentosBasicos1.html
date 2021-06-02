@@ -69,6 +69,37 @@
         console.log(iteraUnArray([1, 2, 5])); //pasamos como parametro un arreglo
         console.log(iteraUnArray([-5, 2, 5, 12]));
         console.log(iteraUnArray([3, 5, 7, 9]));
+
+        /* Ejercicio 5*/
+        //[-3,3,5,7]
+        function encuentraElMayor(array) {
+            var numeroMayor = array[0]; // 7
+            for (var i = 0; i < array.length; i++) { //i=0>1>2>3>4   i es para la posicion dentro del arreglo
+
+                if (numeroMayor < array[i]) { //5 < 7
+                    numeroMayor = array[i]
+                }
+            }
+            return numeroMayor;
+        }
+        console.log(encuentraElMayor([-3, 3, 5, 7]));
+        /* Ejercicio 6*/
+        //[1,3,5,7,20]
+        function encuentraElPromedio(array) {
+            //var promedio = 0;
+            var cantElementos = array.length; //5
+            var sumaTotal = 0; //acumula la suma //1>4>9>16>36
+
+            for (var i = 0; i < array.length; i++) { //i>0>1>2>3>4
+                sumaTotal = sumaTotal + array[i];
+            }
+            //var promedio = sumaTotal / cantElementos;
+            var promedio = sumaTotal / array.length;
+
+            return promedio;
+        }
+
+        console.log("el promedio es: " + encuentraElPromedio([1, 3, 5, 7, 20]));
     </script>
 </head>
 
@@ -79,6 +110,8 @@
         <li><b>Consigue pares hasta 1000:</b> Escribe una función que entregue la suma de todos los números pares del 1 al 1000 - Puedes usar un operador de módulo para este ejercicio.</li>
         <li><b>Suma impares hasta 5000:</b> Escribe una función que devuelva la suma de todos los números impares entre 1 y 5000 (ej: 1+3+5+...+4997+4999).</li>
         <li><b>Itera un array:</b> Escribe una función que devuelva la suma de todos los valores dentro de un array (ej: [1,2,5] retorna 8. [-5,2,5,12] retorna 14).</li>
+        <li><b>Encuentra el mayor (max):</b> Dado un array con múltiples valores, escribe una función que devuelva el número mayor (ej: para [-3,3,5,7] el número mayor (max) es 7).</li>
+        <li><b>Encuentra el promedio (avg):</b> Dado un array con múltiples valores, escribe una función que devuelva el promedio de los valores (ej: para [1,3,5,7,20] el promedio es 7.2).</li>
     </ol>
 </body>
 
