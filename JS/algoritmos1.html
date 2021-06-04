@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmos 1::</title>
+    <script>
+        //ejercicio 1 
+        function a() {
+            console.log('hello');
+        }
+        console.log('Dojo');
+        //resp.:'Dojo'
+
+        //ejercicio 2
+        //function nombre_funcion (parametros){}
+        function b() {
+            console.log('hello');
+            var array = ["tortas", "linda"];
+            return array;
+
+        }
+        x = b(); //x = ["tortas","linda"];
+        console.log('x is', x);
+        //respt.:'hello','x is ["tortas","linda"]'
+
+        //ejercicio 3
+
+        function a(valor1) { //valor1 = 3
+            console.log('valor1 is', valor1);
+            return valor1 + 15; //return 3 + 15; //return 18;
+        }
+
+        x = a(3); //x = 18;
+        console.log('x is', x);
+
+        //respt.:'valor1 is' 3,'x is' 18
+
+        // ejercicio 4
+        function a(n) { //n = 5
+            console.log('n is', n);
+            y = n * 2; // y = 5 * 2; y = 10;
+            return y; //return 10;
+        }
+
+        x = a(3) + a(5); //x = 6 + 10; x= 16
+        console.log('x is', x);
+
+        //rest.:'n is' 3, 'n is' 5,'x is' 16
+
+        //ejercicio 5
+
+        function op(a, b) { //a =3; b = 5
+            c = a + b; // c = 3 + 5 ; c = 8
+            console.log('c is', c);
+            return c; //return 8;
+        }
+
+        x = op(2, 3) + op(3, 5); // x = 5 + 8; x = 13
+        console.log('x is', x);
+        //respt.: 'c is' 5, 'c is' 8, 'x is' 13
+
+        //ejercicio 6
+
+        function op(a, b) { //a = 3; b = 5
+            c = a + b; //c = 3 + 5  ; c = 8;
+            console.log('c is', c);
+            return c; //return 8
+        }
+        x = op(2, 3) + op(3, op(2, 1)) + op(op(2, 1), op(2, 3));
+        //x = 5 + 6 + 8// x = 19
+        console.log('x is', x)
+            /*resp.:'c is' 5, 'c is' 3, 
+            'c is' 6 ,'c is' 3, 
+            'c is' 5, 'c is' 8, 'x is' 19*/
+
+        //ejercicio 7
+        var x = 15;
+
+        function a() {
+            var x = 10;
+        }
+        console.log(x);
+        a();
+        console.log(x);
+
+        //resp.:15, 15
+
+        //ejercicio 8
+        function multiply(x, y) { //x = 2 , y = 3
+            console.log(x);
+            console.log(y);
+        }
+        b = multiply(2, 3); //b = undefined
+        console.log(b);
+        //respt.: 2, 3,
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
