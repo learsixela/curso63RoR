@@ -196,6 +196,51 @@
         z = looping(3, 5); //z = 15;
         console.log(z);
         //rept.:0,0,0,0,0,0,1,2,3,4,0,2,4,6,8,15
+
+        //ejercicio 16
+        /* 
+        Que la función imprima (console.log()) todos los enteros (integers) de 1 a x. 
+        Si x es negativo, haz que se muestre (print/log) “número negativo” 
+        y que la función devuelva falso.
+        */
+        function printUpTo(x) { //x = -2
+            if (x < 0) { //Si x es negativo
+                console.log("Numero negativo");
+                return false;
+            }
+
+            for (var i = 1; i <= x; i++) {
+                console.log(i);
+            }
+
+        }
+        printUpTo(1000); // debería imprimir todos los enteros de 1 to 1000
+        y = printUpTo(-10); // debería imprimir false
+        console.log(y); // debería imprimir false
+
+        //ejercicio 17
+        function printSum(x) {
+            var sum = 0;
+            for (var i = 0; i <= x; i++) {
+                console.log(i);
+                sum = sum + i;
+                console.log("suma parcial: " + sum);
+            }
+            return sum;
+        }
+        y = printSum(255) // debería imprimir todos los enteros de 0 a 255 y que cada entero imprima la suma parcial.
+        console.log("Suma Total: " + y); // // debería imprimir 32640
+
+        //ejercicio 18
+        function printSumArray(x) { //x = [1, 2, 3]
+            var sum = 0; //6
+            for (var i = 0; i < x.length; i++) { //i=2
+                sum = sum + x[i]; //sum = 3 +x[2] ;summ = 3 + 3;
+            }
+            return sum; //return 6;
+        }
+        console.log(printSumArray([1, 2, 3])); // debería imprimir 6
+        //6
     </script>
 </head>
 
