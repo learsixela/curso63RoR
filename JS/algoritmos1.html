@@ -80,7 +80,7 @@
         var x = 15;
 
         function a() {
-            var x = 10;
+            let xx = 10;
         }
         console.log(x);
         a();
@@ -96,6 +96,106 @@
         b = multiply(2, 3); //b = undefined
         console.log(b);
         //respt.: 2, 3,
+
+        //ejercicio 9
+        function multiply(x, y) { //x = 2; y=3
+            return x * y; //return 2 * 3; //return 6;
+        }
+        b = multiply(2, 3); //b = 6;
+        //b = multiply(3, 2);//b = multiply(6, 1);
+        console.log(b); //console.log(6);
+        console.log(multiply(5, 2)); //console.log(10);
+        //respt.: 6 , 10
+
+        multiply(4, 3); //12
+
+        /*
+        var index0 =0;//variable global
+        for (let index = 0; index < array.length; index++) {
+            //let, se usa para variables locales 
+            
+        }
+        */
+        // ejercicio 10
+
+        var x = [1, 2, 3, 4, 5, 10];
+        //x.length = 6; x[x.length-1]; x[0]
+
+        for (var i = 0; i < 5; i++) { //i=0>3>4>7>8
+            i = i + 3; //i = 4 + 3;// i = 7
+            console.log(i);
+        }
+        //respt.: 3,7
+
+        //ejercicio 11
+        var x = 15;
+        console.log(x);
+
+        function awesome() {
+            let x = 10; //creacion de otra variable
+            console.log(x);
+        }
+
+        console.log(x);
+        awesome();
+        console.log(x);
+        //respt.:15, 15, 10, 15
+        /*
+                var sNumeroUno = "1"
+                var iNumeroUno = 1
+                var sPalabraUno = "uno"
+                var iva = 0.19;
+        */
+        //ejercicio 12
+        //i += 2; i = i + 2
+        var suma_total = 0;
+        for (var i = 0; i < 15; i += 2) { //i = 0>2>4>6>8>10>12>14>16
+            suma_total = suma_total + i;
+            console.log(i);
+        }
+        //respt.:0,2,4,6,8,10,12,14
+        //fin
+
+        //ejercicio 13
+        //i++ === i= i+1 
+        for (var i = 0; i < 3; i++) { //i=0>1>2>3
+
+            for (var j = 0; j < 2; j++) { //j=0>1>2
+
+                console.log(i * j); //console.log(2*1)
+            }
+
+        }
+
+        //respt.:0,0,0,1,0,2
+
+        //ejercicio 14
+        function looping(x, y) { //x = 3 ; y = 3
+
+            for (var i = 0; i < 3; i++) { //i=0>1>2>3
+                for (var j = 0; j < 3; j++) { //j=0>1>2>3
+                    console.log(i * j); //console.log(2*2)
+                }
+            }
+        }
+        z = looping(3, 3); //z = undefined
+        console.log(z);
+        //respt.:0,0,0,0,1,2,0,2,4,undefined
+
+        //ejercicio 15
+        function looping(x, y) { //x = 3, y = 5
+
+            for (var i = 0; i < 3; i++) { //i=3
+
+                for (var j = 0; j < 5; j++) { //j=0>1>2>3>4>5
+                    console.log(i * j); //console.log(2 * 0);
+                }
+            }
+            return x * y; //return 3*5; return 15
+        }
+        z = looping(3, 5); //z = 15;
+        console.log(z);
+        //rept.:0,0,0,0,0,0,1,2,3,4,0,2,4,6,8,15
     </script>
 </head>
 
