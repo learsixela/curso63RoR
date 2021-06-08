@@ -220,13 +220,14 @@
 
         //ejercicio 17
         function printSum(x) {
-            var sum = 0;
+            var gato = 0;
             for (var i = 0; i <= x; i++) {
                 console.log(i);
-                sum = sum + i;
-                console.log("suma parcial: " + sum);
+                //variable = variable + algo;
+                gato = gato + i;
+                console.log("suma parcial: " + gato);
             }
-            return sum;
+            return gato;
         }
         y = printSum(255) // debería imprimir todos los enteros de 0 a 255 y que cada entero imprima la suma parcial.
         console.log("Suma Total: " + y); // // debería imprimir 32640
@@ -241,6 +242,24 @@
         }
         console.log(printSumArray([1, 2, 3])); // debería imprimir 6
         //6
+
+        /*Crea una función que entregue el elemento más grande 
+        en un array. 
+        Por ejemplo largestElement([1,30,5,7]) 
+        debiera dar como resultado 30.*/
+
+        function largestElement(arreglo) { //arreglo = [1,30,5,7]
+            var numero_mayor = arreglo[0]; //30
+            for (var i = 0; i < arreglo.length; i++) { //i=0>1>2>3>4
+                //  30< 7
+                if (numero_mayor < arreglo[i]) {
+                    numero_mayor = arreglo[i];
+                }
+            }
+            return numero_mayor;
+        }
+
+        console.log(largestElement([1, 30, 5, 7]));
     </script>
 </head>
 
