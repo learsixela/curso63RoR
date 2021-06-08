@@ -99,6 +99,66 @@
         ];
         elegirAlAzar(curso);
 
+        /*ejercicio 6*/
+
+        function a(x) { //x = [5, "Coding", "Dojo", 4];x.length = 4
+            for (var i = 0; i < x.length; i++) { //i=4
+
+                if (x[i] > 5) { //x[3]= 4 > 5
+                    x[i] = "Coding";
+                } else if (x[i] < 0) {
+                    x[i] = "Dojo";
+                }    
+            }    
+            return x; //return [5, "Coding", "Dojo", 4];
+        }
+        console.log(a([5, 7, -1, 4]))
+            //console.log([5, "Coding", "Dojo", 4]);
+            //resp.: [5, "Coding", "Dojo", 4]
+
+        /*ejercicio 7*/
+        function a(x) { //x=[5, 10];
+            //  5    >  10
+            if (x[0] > x[1]) {
+                return x[1];
+            }
+            return 10;
+        }
+        b = a([5, 10]); //b = 10
+        console.log(b); //console.log(10)
+        //resp.:10
+
+        /*ejercicio 8*/
+        function sum(x) {
+            sum = 0;
+            for (var i = 0; i < x.length; i++) {
+                sum = sum + x[i];
+                console.log(sum);
+            }
+            return sum;
+        }
+
+        //rest.:
+        /*ejercicio 9*/
+        //obtener el promedio
+        function printAverage(x) { //x= [2, 5, 8]; x.length=3
+            sumaTotal = 0; //15
+            for (let i = 0; i < x.length; i++) { //i=3
+                sumaTotal = sumaTotal + x[i];
+                //sumaTotal= 7 + x[2]; 7 + 8
+                //sumaTotal= 15
+            }
+            //var promedio = 15 / 3 = 5
+            var promedio = sumaTotal / x.length;
+            return promedio; //return 5;
+            //return sumaTotal / x.length; return 5
+        }
+        y = printAverage([1, 2, 3]); //y = 2;
+        console.log(y); // should log 2
+
+        y = printAverage([2, 5, 8]); //y = 5
+        console.log(y); // should log 5
+
         /**/
     </script>
 </head>
