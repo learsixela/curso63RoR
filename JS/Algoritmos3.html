@@ -15,20 +15,91 @@
         //respt.:5
 
         //ejercicio 2
-        function a(x, y) { //x=2; y=2;
+        function a(x, y) { //x=6; y=8;
             let z = []; //creacion de array vacio; z.length=0;
-            //z = [2,2,5];
-            z.push(x); //agregue x=2, al final del arreglo
-            z.push(y); //agrega y= 2, al final del arreglo 
-            z.push(5); //agrega al final el numero 5
-            console.log(z); //[2,2,5]
-            return z; //return [2,2,5];
+            //z = [6,8,5];
+            z.push(x); //agregue x=6, al final del arreglo
+            z.push(y); //agrega y=8 , al final del arreglo 
+            z.push(5); //agrega al final del arreglo el numero 5
+            console.log(z); //[6,8,5]
+            return z; //return [6,8,5];
         }
 
         var b = a(2, 2); //b = [2,2,5];
         console.log(b);
-        console.log(a(6, 8));
-        //respt.:[2,2,5],[2,2,5],
+        console.log(a(6, 8)); //console.log([6,8,5]);
+        //respt.:[2,2,5],[2,2,5],[6,8,5],[6,8,5]
+
+        /*ejercicio 3*/
+        function a(x) { //x = 2
+            z = []; //arreglo vacio; z.length=0; (tamaño o cantidad de elementos)
+            //z=[2,2];
+            z.push(x);
+            z.pop(); //elimina el ultimo elemento
+            z.push(x);
+            z.push(x);
+            return z; //return [2,2];
+        }
+        var y = a(2); //y = [2,2];
+        y.push(5); //y = [2,2,5];
+        console.log(y);
+        //rept.:[2,2,5]
+
+        /*
+                array=["a","b","c","d","e"];
+                array.length = 5 ; cuanto elementos existen en el array?
+                5 - 1 = 4
+                array[array.length - 1] => array[4]
+        */
+        /*ejercicio 4*/
+        function a(x) { //x = [2, 3, 4, 5]
+            //x[0]=2 < x[1]=3
+            if (x[0] < x[1]) { //2<3
+                return true;
+            } else {
+                return false;
+            }
+        }
+        b = a([2, 3, 4, 5]); //b = true;
+        console.log(b); //console.log(true);
+        //respt.: true
+
+        /*ejercicio 5*/
+        function a(x) {
+            //x = ["Coding", "Coding", "Coding", "Coding"]; x.length = 4
+
+            for (var i = 0; i < x.length; i = i + 1) { //i=4
+
+                if (x[i] > 0) { //4>0
+                    x[i] = "Coding";
+                }    
+            }    
+            return x; //return ["Coding", "Coding", "Coding", "Coding"];
+        }
+        console.log(a([1, 2, 3, 4])); //console.log(["Coding", "Coding", "Coding", "Coding"]);
+        //respt.:["Coding", "Coding", "Coding", "Coding"]
+
+        /*ejercicio 5.? */
+
+        function elegirAlAzar(array) {
+            //var inicio = array[0];
+            //var fin = array[array.length - 1];
+
+            //math.random (0 y 1)
+            var posicion_aleatoria = Math.floor(Math.random() * array.length) //  0 - 15
+
+            var apellido = array[posicion_aleatoria];
+            console.log(" *** El elegido es: " + apellido);
+        }
+
+        var curso = ["Ramiro", "Sanchez", "Monje",
+            "Jimenez", "Riquelme", "Garay", "Artavia", "Metayer",
+            "Zencovich", "Figueroa", "Palma", "Pollak", "Barria",
+            "Sotomayor", "Cardenas", "Estrada"
+        ];
+        elegirAlAzar(curso);
+
+        /**/
     </script>
 </head>
 
