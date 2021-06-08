@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmos 3::</title>
+    <script>
+        //ejercicio 1
+        function a(x, y) { //x =5; y = 5;
+            return 5;
+        }
+        console.log(a(5, 5)); //console.log(5);
+        //respt.:5
+
+        //ejercicio 2
+        function a(x, y) { //x=2; y=2;
+            let z = []; //creacion de array vacio; z.length=0;
+            //z = [2,2,5];
+            z.push(x); //agregue x=2, al final del arreglo
+            z.push(y); //agrega y= 2, al final del arreglo 
+            z.push(5); //agrega al final el numero 5
+            console.log(z); //[2,2,5]
+            return z; //return [2,2,5];
+        }
+
+        var b = a(2, 2); //b = [2,2,5];
+        console.log(b);
+        console.log(a(6, 8));
+        //respt.:[2,2,5],[2,2,5],
+    </script>
+</head>
+
+<body>
+    <div>
+
+    </div>
+</body>
+
+</html>
