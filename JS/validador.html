@@ -7,21 +7,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Validador</title>
     <script>
-        function removerRango3(arr, a, b) {
-            let arr2 = [];
-            for (var i = 0; i < arr.length; i++) {
-                if (i < a) {
-                    arr2.push(arr[i]);
-                } else {
-                    if (i > b) {
-                        arr2.push(arr[i]);
-                    }
-                }
+        /*     function removerRango3(arr, a, b) {
+                                                                                    let arr2 = [];
+                                                                                    for (var i = 0; i < arr.length; i++) {
+                                                                                        if (i < a) {
+                                                                                            arr2.push(arr[i]);
+                                                                                        } else {
+                                                                                            if (i > b) {
+                                                                                                arr2.push(arr[i]);
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                    console.log(arr2);
+                                                                                }
+
+                                                                                removerRango3([20, 30, 40, 50, 60, 70], 2, 4);
+
+                                                                        */
+
+        /*Array Inverso - 
+        Dado un array, escribe una función que invierte sus valores en el lugar. 
+        Ejemplo: invertir([3,1,6,4,2]) devuelve el mismo array pero con sus valores al revés, es decir [2,4,6,1,3]. Haz esto sin crear un array temporal vacío. (Pista: necesitarás intercambiar (swap) valores).*/
+
+        //[3,1,6,4,2] -> [2,4,6,1,3]
+        // var temp = 3;
+        //[3,1,6,4,2]
+
+        function invertir(array) { //array.length=5 -> cantidad de elementos o largo
+            //array.length-1, la ultima posicion ; array.length/2 = 2.5
+            var temp = 0; //3
+            for (let i = 0; i < array.length / 2; i++) { //i=1
+                /*para i = 0*/
+                /*
+                temp = array[i]; //temp = array[0] = 3 
+                array[i] = array[array.length - 1]; //array[0] = 2 --> [2,1,6,4,2]
+                array[array.length - 1] = temp; //array[4] =  3; -->[2,1,6,4,3]
+                */
+                /*para i = 1*/
+                temp = array[i]; //temp = array[1]; = 1 
+                array[i] = array[array.length - (1 + i)]; //array[1]= array[array.length - (1+1)]
+                array[array.length - (1 + i)] = temp;
             }
-            console.log(arr2);
+
+        }
+        invertir([3, 1, 6, 4, 2]);
+
+        /**/
+        /*Longitudes previas - 
+        Pasado un array (similar a decir ‘tomado un array’ o ‘dado un array’) que contiene strings, reemplaza cada string con un número de acuerdo cantidad de letras 
+        (longitud o length) del string anterior. 
+        Por ejemplo, longitudesPrevias( [“programar”,“dojo”, “genial”]) debería devolver 
+                                        [“programar”,9, 4]. 
+        array[0]="programar"
+        array[1]="dojo"
+        array[2]="genial"
+
+        Pista: ¿For loops solo puede ir hacia adelante?*/
+
+        function longitudesPrevias(array) {
+            //array.length = 3; 
+            //for para recorrer desde la ultima posicion, hasta la posicion cero (array[0])
+            for (var i = array.length - 1; i > 0; i--) {
+                //array[2] = array[1]->"dojo"
+                array[i] = array[i - 1].length; //array[i-1].length == "dojo".length
+            }
+            console.log(array);
+        }
+        longitudesPrevias(["programar", "dojo", "genial"]);
+
+
+        /**/
+        /*
+        Cambiar hacia el centro -  
+        Dado un array, cambia el primer y último valor, el tercero con el ante penútimo, etc.
+        
+        Ejemplo: cambiaHaciaElCentro([true   , 42, "Ada", 2, "pizza"]) 
+        cambia el array a            ["pizza", 42, "Ada", 2, true]. 
+
+        cambiaHaciaElCentro([1,2,3,4,5,6]) 
+        cambia el array a   [6,2,4,3,5,1]. 
+        No es necesario devolver (return) el array esta vez. 
+        */
+
+        function cambiaHaciaElCentro(array) { //["pizza"   , 42, "Ada", 2, true]
+            //array.length = 5; array.length / 2= 2.5
+            var temp = 0;
+
+            for (let i = 0; i < array.length / 2; i += 2) { //i= 4
+
+                temp = array[i]; //temp = "Ada"
+
+                array[i] = array[array.length - (1 + i)]; //array[2]=array[2]
+
+                array[array.length - (1 + i)] = temp; //array[2]="Ada"
+            }
+
+            console.log(array);
+            return array;
         }
 
-        removerRango3([20, 30, 40, 50, 60, 70], 2, 4);
+        console.log("numero impares : " + cambiaHaciaElCentro([true, 42, "Ada", 2, "pizza"]))
+
+
+        }
     </script>
 </head>
 
