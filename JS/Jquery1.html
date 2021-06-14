@@ -9,6 +9,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         $(document).ready(function() {
+            /*
+            
+            $(this).hide() - hides the current element.
+            $("p").hide() - hides all <p> elements.
+            $(".test").hide() - hides all elements with class="test".
+            $("#test").hide() - hides the element with id="test".
+
+            */
             //$('').click(function(){});
             $('button').click(function() {
                 console.log("mi primer JQuery...");
@@ -29,7 +37,7 @@
             $('#enviar3').click(function() {
                 console.log("enviar desde el boton 3 por id");
                 alert("enviar desde el boton 3 por id");
-                //.text()-> para cambiar un texto
+                //.text()-> para leer/cambiar un texto
                 console.log($('#parrafo').text());
                 $('#parrafo').text("Esto si es un parrafo!");
 
