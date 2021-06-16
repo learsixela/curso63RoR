@@ -9,9 +9,20 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         $(document).ready(function() {
-            $('#container').append('<img src=gato.jpg>');
+            for (let i = 1; i <= 8; i++) {
+                $('#container').append('<img src=imagenes/gato.jpg>');
+                $('img').attr('width', '200');
+                //$('img').attr('class', 'border:1');
+                $('img').addClass('imagenes');
+            }
+
         });
     </script>
+    <style>
+        .imagenes {
+            margin: 15px;
+        }
+    </style>
 </head>
 
 <body>
