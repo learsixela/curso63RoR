@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumo JSON::</title>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script>
+        var arrayRespuesta = [];
+        $(document).ready(function() {
+
+            //get y post
+            for (let i = 1; i <= 10; i++) {
+                //obtener desde una url una respuesta en formato json
+                $.get("https://pokeapi.co/api/v2/pokemon/" + i + "/", function(respuesta) {
+                    //console.log(respuesta); //imprimir respuesta
+                    //alert(respuesta.sprites.front_shiny);
+                    arrayRespuesta.push(respuesta);
+                    $('#container').append('<p>el nombre es: ' + respuesta.name + '</p>');
+                    $('#container').append('<img src="' + respuesta.sprites.front_shiny + '" alt="">');
+                }, "json");
+            }
+            console.log('array respuesta', arrayRespuesta);
+            //sort()-> ordena de menor a mayor, o de a - z; sort().reverse(); ordena en sentido contrario
+            /*           var ordenado = arrayRespuesta.sort((a, b) => a.id - b.id); //
+            console.log("ordenado: ");
+            console.log(ordenado);
+*/
+            //console.log(arrayRespuesta[0].id);
+            localStorage.setItem('Nombre', 'Israel');
+            //localStorage.setItem('respuesta', arrayRespuesta[0].id);
+            alert("document.ready");
+
+        });
+
+        $(window).load(function() {
+            alert("window loaded");
+            console.log('array respuesta 2', arrayRespuesta);
+            //localStorage.setItem('respuesta', arrayRespuesta[0].id);
+        });
+    </script>
+</head>
+
+<body>
+    <div id="container">
+
+    </div>
+</body>
+
+</html>
