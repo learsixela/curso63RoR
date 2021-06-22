@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            //$('').click(function(){});
+            //append()-> agregar contenido dentro del elemento
+            //html()-> reemplaza todo el contenido
+            $('#container').append('<p>esto es un parrafo 1</p>');
+            $('#container').append('<p>esto es un parrafo 2</p>');
+            $('#container').append('<p id="unico">esto es un parrafo 3</p>');
+            $('#container').append('<p>esto es un parrafo 4</p>');
+            $('#container').append('<p>esto es un parrafo 5</p>');
+            //attr() ->agrega atributos al elemento(no todos tienen los mismos atributos)
+            $('#container').attr('name', 'principal');
+            //tambien puedo consultar el contenido del atributo
+            console.log($('#container').attr('class'));
+
+            // tres formas de capturar el evento en un elemento
+            // etiqueta, class, id
+            $('p').click(function() {
+                //$(this), identifica la etiqueta que gatilla la accion 
+                $(this).text(); //text(), obtengo el contenido dentro de la etiqueta 
+                console.log(" Hola clase ", $(this).text());
+                $(this).attr('name', 'adry');
+                $(this).css('color', 'green');
+            });
+            //a traves del id, solo lo afecta a el 
+            $('#unico').click(function() {
+                //$(this).css('color', 'blue');
+                $('#unico').css('color', 'blue');
+            });
+        });
+    </script>
+    <style>
+        p {
+            color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container" class="miclase">
+        <p>esto es un parrafo 0</p>
+    </div>
+</body>
+
+</html>

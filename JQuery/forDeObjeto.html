@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            $.get("https://pokeapi.co/api/v2/pokemon/1/", function(respuesta) {
+                console.dir(respuesta.abilities[0].ability.name);
+                console.dir(respuesta.abilities[0]["ability"]["name"]);
+                console.dir(respuesta.abilities[0]["ability"].name);
+                /*for (var key in respuesta) {
+                    console.log("keys: " + key);
+                    //console.log(respuesta.key);
+                    console.log(respuesta[key]); //respuesta["abilities"] === respuesta.abilities
+                    console.log("******************************")
+                }*/
+
+            }, "json");
+
+
+        });
+    </script>
+
+</head>
+
+<body>
+    <div id="container">
+
+    </div>
+</body>
+
+</html>

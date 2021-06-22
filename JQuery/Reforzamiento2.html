@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            console.log('0.- Al inicio');
+            var arregloTemporal = [];
+            for (let i = 1; i <= 10; i++) {
+                // console.log('1.- Al inicio del for', i);
+                //obtener desde la url una respueta en formato json
+                $.get("https://pokeapi.co/api/v2/pokemon/" + i + "/", function(respuesta) {
+                    //console.log('4.- dentro del get');
+                    //console.dir(respuesta); //imprime la respuesta (objeto)
+
+                    for (var key in respuesta) {
+                        console.log("keys: " + key);
+                    }
+
+                    arregloTemporal.push(respuesta);
+
+                    if (arregloTemporal.length == 10) {
+
+                        //.sort(); ascendente menor a mayor a-z;.sort().reverse() ordena inversamente
+                        arregloTemporal.sort((a, b) => (a.id > b.id) && 1 || -1); //ordenado
+                        console.log(arregloTemporal);
+
+                        pintarEnHtml();
+                    }
+
+                }, "json");
+                //console.log('2.- Despues del get, dentro del for ', i);
+            }
+            //console.log('3.- fuera del for');
+
+            function pintarEnHtml() {
+                //for pára recorrer arreglos
+                for (let j = 0; j < arregloTemporal.length; j++) {
+                    $('#container').append('<p> el id es:' + arregloTemporal[j].id + ' </p>');
+                    $('#container').append('<p> el nombre es:' + arregloTemporal[j].name + ' </p>');
+                    $('#container').append('<img src="' + arregloTemporal[j].sprites.front_default + '" alt="">');
+                }
+                $('p').addClass('miclase');
+            }
+
+        });
+    </script>
+    <style>
+        .miclase {
+            color: cadetblue;
+            font-size: 40px;
+            background-color: cyan;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+
+    </div>
+</body>
+
+</html>
