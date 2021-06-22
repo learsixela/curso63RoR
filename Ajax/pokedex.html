@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POKEDEX::</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            //mostrar las imagenes en el html
+            for (let i = 1; i <= 898; i++) {
+                $('#container').append('<img id="' + i + '" src="http://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + i + '.png">');
+            }
+
+            $('img').click(function() {
+                var id = $(this).attr('id'); //captura el valor del id, de la imagen clickeada
+                //consumo de api
+                $.get("https://pokeapi.co/api/v2/pokemon/" + id + "/", function(respuesta) {
+                    console.dir(respuesta);
+                    //console.log(respuesta.types[0].type.name);
+                    //console.log(respuesta.sprites.front_default);
+
+
+
+                    //mostrar el modal,a traves de css
+                    $('#miModal').addClass('miModaltarget');
+
+                    //llenar el modal con la informacion del pokemon
+                    //respuesta.name; respuesta.sprites.front_default;respuesta.types[0].type.name;respuesta.height;respuesta.weight
+
+                    /* 
+                <h2>Mi primer Modal</h2>
+                <p>Este es mi primera ventana modal sin utilizar JavaScript.</p>*/
+
+                    $('.modalContenido').html('');
+                    $('.modalContenido').append('<h2>' + respuesta.name + '</h2>');
+                    $('.modalContenido').append('<img class="fondoImg" src="' + respuesta.sprites.front_default + '" alt="">');
+                    $('.modalContenido').append('<p><b>Tipo:</b> ' + respuesta.types[0].type.name + '</p>');
+                    $('.modalContenido').append('<p><b>Altura:</b> ' + respuesta.height + '</p>');
+                    $('.modalContenido').append('<p><b>Gordura:</b> ' + respuesta.weight + '</p>');
+                }, "json");
+
+            });
+
+            //capturamos el click en el elemento
+            $('button').click(function() {
+                //quitar una clase .removeClass()
+                $('#miModal').removeClass('miModaltarget');
+
+            });
+        });
+    </script>
+    <style>
+        #container {
+            background-image: url('pokebola.png');
+        }
+        
+        .fondoImg {
+            margin-left: 60px;
+        }
+        
+        h1 {
+            margin-right: 50px;
+        }
+        
+        h1,
+        h2 {
+            color: cornsilk;
+        }
+        
+        h1,
+        button {
+            display: inline-block;
+        }
+        
+        .modal-contenido {
+            background-color: aqua;
+            width: 200px;
+            padding: 10px 20px;
+            margin: 10% auto;
+            position: relative;
+            background-image: url('fondo.png');
+            background-position: center;
+        }
+        
+        .modal {
+            background-color: rgba(0, 0, 0, .8);
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 1s;
+        }
+        
+        #miModal:target {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        
+        .miModaltarget {
+            opacity: 1;
+            pointer-events: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+
+        <div id="miModal" class="modal">
+            <div class="modal-contenido">
+                <h1>Pokedex</h1><button id="cerrar">X</button>
+
+                <div class="modalContenido"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
