@@ -9,17 +9,20 @@
 <!--<script src="script.js"></script>-->
 <script>
 function iniciarMap(){
-    var coord = {lat:-38.7403139 ,lng: -72.5844945};
+    var coord = {lat:-38.740706 ,lng: -72.6218674};
     var map = new google.maps.Map(document.getElementById('map'),{
-      zoom: 10,
+      zoom: 13,
       center: coord
     });
     var marker = new google.maps.Marker({
       position: coord,
-      map: map
+      map: map,
+	  title:'Inforcap'
     });
 }
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>
+<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>-->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCKiIqCdZGrVxx06LSbe7uG3zXOq1Cz5k&callback=iniciarMap" async defer></script>
+	<script>
 </body>
 </html>
